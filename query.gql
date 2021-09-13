@@ -1,0 +1,9 @@
+{
+    business(id: "garaje-san-francisco") {
+        name
+        id
+        alias
+        rating
+        url
+    }
+}
