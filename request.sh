@@ -11,7 +11,9 @@ result="$(curl -X POST -H "Authorization: Bearer $(cat access_key.txt)" -H "Cont
         url
     }
 }')"
+
 rating="$(jq '.data.business.rating' <<< $result)"
 business="$(jq -r '.data.business.name' <<< $result)"
+
 echo $business has a rating of $rating on Yelp
 
